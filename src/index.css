@@ -117,7 +117,7 @@ input:focus{
   background-color: grey;
   color: whitesmoke;
   cursor: pointer;
-  padding-left: 10px;
+  padding: 0 10px;
 }
 
 .aside-btn > p{
@@ -185,6 +185,7 @@ input:focus{
   flex-grow: 1;
   color: white;
   font-family: inherit;
+  font-size: 1rem;
 }
 
 .add-todo-btn{
@@ -231,6 +232,14 @@ button.add-category p{
 
 button.add-category:hover{
   color: rgb(37, 37, 37);
+}
+
+@media (min-width: 800px) {
+  .aside-content{
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 800px) {

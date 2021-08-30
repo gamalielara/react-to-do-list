@@ -27,19 +27,19 @@ function App() {
               <h1>Welcome Back, Ara Gamaliel!</h1>
               <AddTodo categories={categories} todos={todos} addTodo={setTodo}/>
               <Switch>
-                <Route exact path ='/'>
+                <Route exact path ='/react-to-do-list/'>
                   <ShowTodoList todos={todos} setTodos={setTodo} text='All Todos'/>
                 </Route>
-                <Route path='/myday'>
+                <Route path='/react-to-do-list/myday'>
                   <ShowTodoList todos={myDayTodos} setTodos={setTodo} text={today}/>
                 </Route>
-                <Route path='/completed-todos'>
+                <Route path='/react-to-do-list/completed-todos'>
                   <ShowTodoList todos={completedTodos} setTodos={setTodo} text='Completed Todos'/>
                 </Route>
-                <Route path='/add-category'>
+                <Route path='/react-to-do-list/add-category'>
                   <AddCategory setCategories={setCategories} categories={categories}/>
                 </Route>
-                <Route path='/:category'>
+                <Route path='/react-to-do-list/:category'>
                   <CategoryTodoList todos={todos} setTodos={setTodo}/>
                 </Route>
               </Switch>
