@@ -89,7 +89,6 @@ div.navbar-menu{
   left: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
   background-color: whitesmoke;
   padding: 0 20px;
@@ -292,19 +291,15 @@ button.add-category:hover{
 
   .main-content > h1{font-size: 3vmax;}
 
-  .aside-btn > p {font-size: 2.5vmax;}
-
   .showtodo > h3{font-size: 2vmax;}
 
   div.navbar-menu{
-    width: 40vw;
+    width: 100vw;
   }
 
   .content > .main-content{
     width: 100%;
   }
-  
-  .aside-btn > p {font-size: 1.25vmax;}
 
   .add-to-do{
     height: auto;
