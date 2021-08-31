@@ -80,6 +80,45 @@ input:focus{
   padding: 10px;
 }
 
+button.menu{font-size: 1.5rem;}
+
+div.navbar-menu{
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: whitesmoke;
+  padding: 0 20px;
+  height: 100vh;
+  width: 20vw;
+  transition: .5s ease-in;
+}
+
+.hidden-navbar{
+  transform: translateX(-100%);
+}
+
+.shown-navbar{
+  transform: translateX(0);
+}
+
+.menu-close{
+  position: absolute;
+  top: 5%;
+}
+
+.navbar-menu{
+  padding: 0;
+}
+
+.navbar-menu > li{
+  list-style: none;
+}
+
 #asideMenu{
   position: relative;
 }
@@ -141,13 +180,6 @@ input:focus{
   margin: 10px 0;
 }
 
-/* .to-do-container:hover{
-  border: none;
-  background-color: grey;
-  color: white;
-  cursor:pointer;
-} */
-
 .to-do-container .to-do-details{
   margin-left: 20px;
   padding: 10px;
@@ -185,7 +217,6 @@ input:focus{
   flex-grow: 1;
   color: white;
   font-family: inherit;
-  font-size: 1rem;
 }
 
 .add-todo-btn{
@@ -237,48 +268,43 @@ button.add-category:hover{
 @media (min-width: 800px) {
   .aside-content{
     display: flex;
+    /* display: none; */
     opacity: 1;
     transform: translateX(0);
+  }
+
+  nav.navbar{
+    display: none;
   }
 }
 
 @media (max-width: 800px) {
   .my-profile{display: none !important;}
-  
-  .menu-toggle{display: block;}
+
+  .content{
+    align-items: center;
+    justify-content: center;
+  }
 
   .content > .aside-content{
     display: none;
-    opacity: 0;
-    transform: translateX(-1000%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: whitesmoke;
-    width: 100vw;
-    height: 100vh;
-    transition: all 1s ease;
   }
 
-  .content > .aside-content > #asideMenu{
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-  }
+  .main-content > h1{font-size: 3vmax;}
 
-  #asideMenu > .hide-aside{
-    display: block;
+  .aside-btn > p {font-size: 2.5vmax;}
+
+  .showtodo > h3{font-size: 2vmax;}
+
+  div.navbar-menu{
+    width: 40vw;
   }
 
   .content > .main-content{
     width: 100%;
   }
+  
+  .aside-btn > p {font-size: 1.25vmax;}
 
   .add-to-do{
     height: auto;

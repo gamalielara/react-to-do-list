@@ -1,21 +1,9 @@
-import Aside from './Aside';
+import Navbar from './Navbar';
 
-const Header = () => {
-    const showAside = (e) => {
-        const asideMenu = document.querySelector('.aside-content');
-        console.log(asideMenu);
-        asideMenu.style.display = 'flex';
-        setTimeout(()=>{
-            asideMenu.style.opacity = '1';
-            asideMenu.style.transform = 'translateX(0)';
-        }, 50);
-    }
+const Header = ({categories}) => {
     return ( 
         <header className="App-header">
-            <div className="menu-toggle">
-                <button className="menu open" id="menu" onClick = {showAside}><i className="fas fa-bars"></i></button>
-            </div>
-
+            <Navbar categories={categories}/>
             <div className="title">
             <h2 class="title"><i class="icon fas fa-check-double"></i>toDo</h2>
             </div>

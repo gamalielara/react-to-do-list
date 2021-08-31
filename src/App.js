@@ -18,7 +18,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header/>
+        <Header categories={categories}/>
         <div className="content">
           <div className="aside-content">
             <Aside categories={categories}/>

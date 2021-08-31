@@ -1,15 +1,6 @@
 import {Link} from 'react-router-dom';
 const Aside = ({categories}) => {
 
-    const hideAside = () => {
-        const asideMenu = document.querySelector('.aside-content');
-        asideMenu.style.transform = 'translateX(-1000%)';
-        asideMenu.style.opacity = '0';
-        setTimeout(()=>{
-            asideMenu.style.display = 'none';
-        }, 50);
-    }
-
     const generateNewCategories = () => {
         let newCategoriesDiv = [];
 
@@ -25,7 +16,6 @@ const Aside = ({categories}) => {
 
     return ( 
         <aside id="asideMenu">
-            <button className="hide-aside" onClick={hideAside}><i className="fas fa-times"></i></button>
             <h3>Categories</h3>
             <Link to='/react-to-do-list/'><div className="aside-btn my-day"><p><i className="icon fas fa-list"></i> All Todos</p></div></Link>
             <Link to='/react-to-do-list/myday'><div className="aside-btn my-day"><p><i className="icon far fa-sun"></i> My Day</p></div></Link>

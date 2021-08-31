@@ -34,7 +34,6 @@ const Todo = ({todos, setTodos}) => {
                 <p className="deadline">{todo.deadline}</p>
                 <p className="categories">{todo.category}</p>
             </div>
-            <button className="edit-button"><i className="button-icon far fa-edit" onMouseEnter={changeButton} onMouseLeave={changeButton}></i></button>
             <button className="delete-button"><i className="button-icon far fa-trash-alt" onMouseEnter={changeButton} onMouseLeave={changeButton} onClick={() => deleteTodo(todo)}></i></button>
         </div>
         ))
